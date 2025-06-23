@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="galeri.css"> 
+</head>
+<body>
+     <div class="container">
+            <div class="header">
+            <h1 class="logo" style="text-align: center;">WELCOME TO MY WEBSITE</h1>
+                <ul>
+                    <li><a href="index.html">BERANDA</a></li>
+                    <li><a href="Profil.html">PROFIL</a></li>
+                    <li><a href="Galeri.html">GALERI</a></li>
+                    <li><a href="Artikel.html">ARTIKEL</a></li>
+                    <li><a href="Tentang.html">TENTANG</a></li>
+                </ul>
+            </div>
+        </div>
+    <div class="galeri">
+      <div class="galeri-img">
+        <img src="tk.jpeg" onclick="tampilPreview(this)">
+        <img src="smp.jpeg" onclick="tampilPreview(this)">
+        <img src="sma.jpeg" onclick="tampilPreview(this)">
+        <img src="kuliah.jpeg" onclick="tampilPreview(this)">
+        <img src="almet.jpeg" onclick="tampilPreview(this)">
+        <img src="r1.jpeg" onclick="tampilPreview(this)">
+        <img src="pren1.jpeg" onclick="tampilPreview(this)">
+        <img src="pren2.jpeg" onclick="tampilPreview(this)">
+        <img src="pren3.jpeg" onclick="tampilPreview(this)">
+        <img src="pren4.jpeg" onclick="tampilPreview(this)">
+        <img src="pren5.jpeg" onclick="tampilPreview(this)">
+        <img src="r5.jpeg" onclick="tampilPreview(this)">
+        <img src="r2.jpeg" onclick="tampilPreview(this)">
+        <img src="fam1.jpeg" onclick="tampilPreview(this)">
+        <img src="fam2.jpeg" onclick="tampilPreview(this)">
+        <img src="fam3.jpeg" onclick="tampilPreview(this)">
+        <img src="fam4.jpeg" onclick="tampilPreview(this)">
+        <img src="fam5.jpeg" onclick="tampilPreview(this)">
+        <img src="r4.jpeg" onclick="tampilPreview(this)">
+        <img src="r3.jpeg" onclick="tampilPreview(this)">
+      </div>
+    </div>
+<!-- Tambahkan untuk Preview gambar -->
+ <div id="overlay" class="overlay" onclick="tutupPreview()">
+    <img id="gambar-besar" class="gambar-preview" />
+  </div>
+
+  <script>
+    function tampilPreview(el) {
+      const overlay = document.getElementById('overlay');
+      const gambarBesar = document.getElementById('gambar-besar');
+      gambarBesar.src = el.src;
+      overlay.style.display = 'flex';
+    }
+
+    function tutupPreview() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+          
+</body>
+</html>
